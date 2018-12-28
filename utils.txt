@@ -1,0 +1,3 @@
+dir .\ -Directory -recurse | where {-NOT $_.GetFiles("*","AllDirectories")} | del -recurse -whatif
+
+for %a in (*.*) do ren "%a" "RA_%a"
