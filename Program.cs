@@ -14,6 +14,11 @@ namespace PicSort
     {
         static void Main(string[] args)
         {
+            if (args == null || args.Length != 3)
+            {
+                Console.WriteLine("{srcDir} {dstDir} {fileFilter}");
+                return;
+            }
             var srcDir = args[0];
             var dstDir = args[1];
             var fileFilter = args[2]; // : "*.jpg";
